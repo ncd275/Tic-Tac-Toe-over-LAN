@@ -41,8 +41,8 @@ def checkWinner(board,position,currentPlayer,sock):
 				if element in player1M:
 					marks+=1
 					if marks==3:
-						print player1, ' is the winnner!!!'
-						sock.send('%s is the winner!!!'%player1)
+						print player1, ' is the winnner!!!\nFinished'
+						sock.send('%s is the winner!!!\nFinished'%player1)
 						return True
 			marks=0
 	else:
@@ -53,8 +53,8 @@ def checkWinner(board,position,currentPlayer,sock):
 				if element in player2M:
 					marks+=1
 					if marks==3:
-						print player2, ' is the winnner!!!'
-						sock.send('%s is the winner!!!'%player2)
+						print player2, ' is the winnner!!!\nFinished'
+						sock.send('%s is the winner!!!\nFinished'%player2)
 						return True
 			marks=0
 	if len(player1M)+len(player2M)==9:
@@ -149,14 +149,5 @@ while True:
 	   		theGame(position,sock,currentPlayer)
 	   		isFinished=checkWinner(board, position,currentPlayer,sock)
 			currentPlayer=changePlayer(currentPlayer)
-	sock.send('Finished')
 	break
-print 'Finished'
 sock.close()
-   	
-
-
-
-
-
-   

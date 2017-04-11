@@ -10,8 +10,6 @@ port = 21217
 
 s.connect((host, port))
 
-
-
 print s.recv(4096)
 playername=raw_input()
 s.send(playername)
@@ -25,10 +23,8 @@ while True:
 		s.send(position)
 	else:
 		print data
-	if data=='Finished':
+
+	if 'Finished' in data:
 		break
-		s.close()
 
-s.close()
-
-              
+s.close()           
