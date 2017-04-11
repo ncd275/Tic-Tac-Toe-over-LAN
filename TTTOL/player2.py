@@ -6,7 +6,7 @@ print 'Welcome to Tic-Tac-Toe over LAN\nYou are player 2 acting as the client\n\
 host=raw_input()
 
 s = socket.socket() 
-port = 12345               
+port = 21217               
 
 s.connect((host, port))
 
@@ -27,6 +27,7 @@ while True:
 		print data
 	if data=='Finished':
 		break
+		s.close()
 
 s.close()
 

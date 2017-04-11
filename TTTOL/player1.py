@@ -115,10 +115,10 @@ print '\nWelcome to Tic-Tac-Toe over LAN\nYou are player 1 acting as the server\
 host = raw_input()
 
 s = socket.socket()
-port = 12345               
+port = 21217               
 s.bind((host, port))
 print '\n\nThis game is running on %s:%s\n\nWaiting for connection...'%(host,port)
-s.listen(5)
+s.listen(1)
 sock, addr = s.accept()         
 while True:
 	print 'Got connection from', addr,'\n\n'
@@ -133,7 +133,7 @@ while True:
    	play = '\n\nPlayers\n1. %s\n2. %s\n\n%s'%(player1,player2,constructBoard())
    	print play
    	sock.send(play)
-   	currentPlayer = player1
+   	currentPlayer = random.choice(players)
    	while isFinished==False:
 	   	if currentPlayer==player1:
 	   		print '\n\nIt is your turn. %s place your piece'%player1
