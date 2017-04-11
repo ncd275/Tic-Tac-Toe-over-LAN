@@ -26,7 +26,9 @@ This will be the IP that you will enter when prompted
 After the players connect and choose their display name, they will see the game board:
 
 [' 1 ', ' 2 ', ' 3 ']
+
 [' 4 ', ' 5 ', ' 6 ']
+
 [' 7 ', ' 8 ', ' 9 ']
 
 From here, enter the number of the position you want to place your piece. Player 1 is always Xs and Player 2 is always Os
