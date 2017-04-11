@@ -2,7 +2,7 @@
 #player2.py acts as the client
 import socket             
 
-print 'Welcome to Tic-Tac-Toe over LAN\nYou are player 2 acting as the client\n\nEnter the private IP address of player 1: '
+print '\nWelcome to Tic-Tac-Toe over LAN\nYou are player 2 acting as the client\n\nEnter the private IP address of player 1: '
 host=raw_input()
 
 s = socket.socket() 
