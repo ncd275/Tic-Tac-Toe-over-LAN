@@ -7,6 +7,7 @@ This is a Tic Tac Toe game that is ran through the command line written in Pytho
 Prerequisites
 --------------
 -Python 2.7 (Not python 3 compatible as of now)
+
 -Port 21217 available (can be changed in .py file)
 
 
